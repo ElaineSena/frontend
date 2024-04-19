@@ -1,12 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
 :root, :root[data-theme='dark'] {
     --primary-color: #F0F0F0; /* cor de texto */
-    --primary-bg-color: #111217; /* cor de fundo */
+    --secondary-color: #28292E; /* segunda cor de texto */
+    --primary-bg-color: #111217; /* cor de fundo = bg = background */
+    --secondary-bg-color: #28292E; /*  */
+    --primary-border-color: #28292E;
+    --secondary-border-color: #5657A4;
 
+    --title-color: #F0F0F0;
+    --text-color: #9A9A9C;
+    --link-color: #9A9A9C;
+    --icon-color: #C7C8C9;
 }
 
 :root [data-theme='light'] {
     --primary-color: #0B0B0F;
     --primary-bg-color: #E9E9E9;
+    --secondary-bg-color: #C7C8C9;
+    --primary-border-color: #C7C8C9;
+    --secondary-border-color: #9A9A9C;
+
+    --title-color: #0B0B0F;
+    --text-color: #28292E;
+    --link-color: #28292E;
+    --icon-color: #56572A;
 }
 
+/*
+definindo variáveis de cores para um tema claro e um tema escuro
+
+ROOT refere-se ao elemento raiz do HTML
+
+seletor : root define as variáveis globais
+
+Isso oferece uma maneira flexível de definir valores 
+que podem ser reutilizaos em todo o seu CSS e facilmente atualizados de um unico lugar
+*/
+
+html [data-theme='light'] .brand-logo {
+    filter: invert(1);
+}
+html [data-theme='light'] .tecnologias-logo {
+    filter: invert(80%);
+}
+
+/* (*) reset do CSS */
+* {
+    margin: 0%; /* margem */
+    padding: 0px; /* espaçamento ou preenchimento */
+    box-sizing: border-box; /* tamanho da caixa */
+    vertical-align: baseline; /* alinhamento vertical */
+    list-style: none; /* altera os caracteres de lista ex: ponto, traço, número, números romanos */
+    scrollbar-width: thin; /* barra de rolagem */
+    scrollbar-color: var(--secondary-bg-color) transparent;
+}
+body{
+    background: var(--primary-bg-color); /* linka a cor de fundo com o que foi definido na paleta de cor no inicio do codigo */
+    font-family: 'Inter', Tahoma, Verdana, Geneva, sans-serif;
+    color: var(--text-color);
+}
+
+#header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2; /* sobrepõe o a pagina durante a rolagem, ex: congela linha igual no excel */
+}
+
+.header-toggle { /* botão de liga e desliga */
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
