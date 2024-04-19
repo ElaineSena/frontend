@@ -74,6 +74,9 @@ body{
 .header-toggle { /* botão de liga e desliga */
     display: flex;
     justify-content: flex-end;
-    
+}
 
+.header-logo .logo {
+    width: 3.25rem; /* rem utilizado para a versão mobile // se multiplicado por 16 converte o valor para pixel px */
+    height: 3.25rem;
 }
