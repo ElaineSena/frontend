@@ -55,20 +55,26 @@ html [data-theme='light'] .tecnologias-logo {
     scrollbar-width: thin; /* barra de rolagem */
     scrollbar-color: var(--secondary-bg-color) transparent;
 }
-body{
+
+body {
     background: var(--primary-bg-color); /* linka a cor de fundo com o que foi definido na paleta de cor no inicio do codigo */
     font-family: 'Inter', Tahoma, Verdana, Geneva, sans-serif;
     color: var(--text-color);
 }
 
-#header{
+#header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem; /* primeiro valor referente a superior e inferior e o segundo valor refere-se as laterais */
     z-index: 2; /* sobrepõe o a pagina durante a rolagem, ex: congela linha igual no excel */
+}
+
+.header-logo .logo {
+    width: 3.25rem; /* rem para ser utilizado também na versão mobile // se multiplicado por 16 converte o valor para pixel px */
+    height: 3.25rem;
 }
 
 .header-toggle { /* botão de liga e desliga */
@@ -76,7 +82,54 @@ body{
     justify-content: flex-end;
 }
 
-.header-logo .logo {
-    width: 3.25rem; /* rem utilizado para a versão mobile // se multiplicado por 16 converte o valor para pixel px */
-    height: 3.25rem;
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* esapaço entre o menu */
+}
+
+.menu-mobile {
+    width: 100vw; /* VW = viewpoint width // visualização de comprimento */
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon, /* hover é uma opção do pc, quando passa o mouse e cima do icone e ele muda de cor */
+.menu-link:hover .menu-text {
+    color: var(--primary-color);
+}
+
+.menu-icon, .menu-text {
+    color: var(--text-color);
+}
+
+.menu-icon {
+    font-size: 1.rem;
 }
