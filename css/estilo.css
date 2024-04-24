@@ -6,7 +6,7 @@
     --primary-bg-color: #111217; /* cor de fundo = bg = background */
     --secondary-bg-color: #28292E; /*  */
     --primary-border-color: #28292E;
-    --secondary-border-color: #5657A4;
+    --secondary-border-color: #565754;
 
     --title-color: #F0F0F0;
     --text-color: #9A9A9C;
@@ -24,7 +24,7 @@
     --title-color: #0B0B0F;
     --text-color: #28292E;
     --link-color: #28292E;
-    --icon-color: #56572A;
+    --icon-color: #56575A;
 }
 
 /*
@@ -49,7 +49,7 @@ html [data-theme='light'] .tecnologias-logo {
 * {
     margin: 0%; /* margem */
     padding: 0px; /* espaçamento ou preenchimento */
-    box-sizing: border-box; /* tamanho da caixa */
+    box-sizing: border-box; /* tamanho da caixa // adicionar o texto de explição */
     vertical-align: baseline; /* alinhamento vertical */
     list-style: none; /* altera os caracteres de lista ex: ponto, traço, número, números romanos */
     scrollbar-width: thin; /* barra de rolagem */
@@ -62,10 +62,65 @@ body {
     color: var(--text-color);
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+i {
+    color: var(--icon-color)
+}
+
+b {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+h3 {
+    font-size: 1.55rem;
+    text-align: left;
+}
+
+h4 {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+}
+
+h1, h2, h3 {
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, Sans-Serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+
+p, span, li {
+    font-size: 1rem;
+}
+
+p {
+    text-align: justify;
+}
+
 #header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem; /* primeiro valor referente a superior e inferior e o segundo valor refere-se as laterais */
@@ -90,9 +145,10 @@ body {
 }
 
 .menu {
-    display: flex;
+    display: flex; /* Adicionar o texto de explicação*/
     align-items: center;
     background: var(--primary-bg-color);
+    gap: 1rem; /* esapaço entre o menu */
 }
 
 .menu-item {
@@ -121,7 +177,7 @@ body {
 
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
-.menu-link:hover .menu-icon, /* hover é uma opção do pc, quando passa o mouse e cima do icone e ele muda de cor */
+.menu-link:hover .menu-icon, /* hover= pseudo -classe, uma opção do pc, quando passa o mouse e cima do icone e ele muda de cor */
 .menu-link:hover .menu-text {
     color: var(--primary-color);
 }
@@ -132,4 +188,36 @@ body {
 
 .menu-icon {
     font-size: 1.rem;
+}
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.header-nav { /* menu desktop */
+    display: none;
+}
+
+.menu-principal {
+    gap: 1rem;
+}
+
+.menu-social {
+    gap: 1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    background: transparent;
+    border: 3rem;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    color: var(--primary-color);
 }
