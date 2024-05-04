@@ -172,7 +172,7 @@ p {
 
 .menu-mobile {
     width: 100vw; /* VW = viewpoint width // visualização de comprimento */
-    position: fixed;
+    position: fixed; /* Deixa o menu do rodapé fixo */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -502,3 +502,91 @@ border: 1px solid var(--primary-border-color);
 }
 
 /* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
+}
+
+.contato p {
+    text-align: center;
+}
+
+.contato .btn {
+    width: auto; /* deixa o tamanho do botã proporcional ao texto */
+}
+
+.contato .email {
+    text-transform: uppercase;
+}
+
+/* Roda pé */
+
+footer {
+    margin-bottom: 5rem;
+}
+
+footer p {
+    font-size: .87rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsividade */
+@media (min-width: 768px) { 
+    #header {
+        position: fixed; /* Posição do cabeçalho fixa até 768px*/
+        border-bottom: 1px solid var(--primary-border-color); 
+        padding: 1rem 6rem;
+        background: var(--primary-bg-color);
+    }
+
+    .nav-mobile {
+        display: none; /* Aiva o menu no rodapé quando chega em 768px */
+    }
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav,
+    .header-toggle {
+        min-width: 30%; /* Centraliza o logo */
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3;
+    }
+
+    #home, .projeos, .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-contend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tecnologias {
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
+    }
+    
+    .contato {
+        padding: 6rem;
+    }
+
+    .contato p {
+        width: 80%;
+    }
+
+}
