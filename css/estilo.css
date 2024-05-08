@@ -255,7 +255,7 @@ p {
     gap: 2rem;
 }
 
-.main-contend {
+.main-content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -373,7 +373,7 @@ p {
     padding: .65rem 1.25rem;
 }
 
-.card-body .btn span {
+.card-button .btn span {
     font-size: 1rem;
 }
 
@@ -435,7 +435,7 @@ p {
     font-size: 1.2rem;
 }
 
-.sobre-contant2 .col1,
+.sobre-content2 .col1,
 .sobre-content2 .col2 { /* Coluna Formação e Experiências */
     display: flex;
     flex-direction: column;
@@ -443,8 +443,8 @@ p {
     gap: 2rem;
 }
 
-.sobre-contant2 .col1 .row1,
-.sobre-contant2 .col1 .row2 {
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col1 .row2 {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -539,7 +539,7 @@ footer p {
 /* Responsividade */
 @media (min-width: 768px) { 
     #header {
-        position: fixed; /* Posição do cabeçalho fixa até 768px*/
+        position: fixed; /* Posição do cabeçalho fixa até chegar em 768px*/
         border-bottom: 1px solid var(--primary-border-color); 
         padding: 1rem 6rem;
         background: var(--primary-bg-color);
@@ -570,7 +570,7 @@ footer p {
         padding: 8rem 6rem 4rem 6rem;
     }
 
-    .main-contend {
+    .main-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -589,4 +589,115 @@ footer p {
         width: 80%;
     }
 
+    footer {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .card-cover {
+        width: 55%;
+    }
+
+    .sobre {
+        gap: 5rem;
+    }
+
+    .sobre-content1, .sobre-content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+
+    .descricao-button {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #home {
+        padding: 12rem 6rem 2rem; /* Margem da home */
+    }
+
+    .main-content .btn {
+        width: auto;
+    }
+
+    .tecnologias {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10rem 6rem 4rem;
+    }
+
+    .tecnologias h2 {
+        font-size: 3rem;
+        width: 55%;
+    }
+
+    .tecnologias-lista {
+        gap: 1rem;
+    }
+
+    .tecnologia-item {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .tecnologias-logo {
+        height: 3rem;
+    }
+
+    p, span, li {
+        font-size: 1.15rem;
+    }
+
+    .card-button .btn,
+    .descricao-button .btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+
+    h2 {
+        font-size: 4.5rem;
+    }
+
+    h3 {
+        font-size: 3.25rem;
+    }
+
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+
+    .tecnologias, .projetos, .sobre {
+        padding: 10rem 15rem 4rem;
+    }
 }
