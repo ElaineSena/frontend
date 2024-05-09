@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
-:root, :root[data-theme='dark'] {
+:root, 
+:root[data-theme='dark'] { /* Definir tema dark do site // root = raiz*/
     --primary-color: #F0F0F0; /* cor de texto */
     --secondary-color: #28292E; /* segunda cor de texto */
     --primary-bg-color: #111217; /* cor de fundo = bg = background */
@@ -10,12 +11,11 @@
 
     --title-color: #F0F0F0;
     --text-color: #9A9A9C;
-    --text-color-mobile--: blue;
-    --link-color: #9A9A9C;
+    --link-color: #56575A;
     --icon-color: #C7C8C9;
 }
 
-:root [data-theme='light'] {
+:root[data-theme='light'] { /* Definir tema light */
     --primary-color: #0B0B0F;
     --primary-bg-color: #E9E9E9;
     --secondary-bg-color: #C7C8C9;
@@ -39,10 +39,10 @@ Isso oferece uma maneira flexível de definir valores
 que podem ser reutilizaos em todo o seu CSS e facilmente atualizados de um unico lugar
 */
 
-html [data-theme='light'] .brand-logo {
+html[data-theme='light'] .logo { /* Pela Sintaxe do JS Root e HTML não pode ter espaço */
     filter: invert(1);
 }
-html [data-theme='light'] .tecnologias-logo {
+html[data-theme='light'] .tecnologias-logo {
     filter: invert(80%);
 }
 
@@ -166,8 +166,13 @@ p {
 
 .menu-link {
     display: flex;
+    /*  Torna o elemento um flex container automaticamente
+    transformando todos os seus filhos diretos em flex itens */
     align-items: center;
     gap: .5rem;
+    /* usada para definir o espaço entre os elementos
+    criar espaçamento uniforme entre os elementos
+    */
 }
 
 .menu-mobile {
@@ -186,8 +191,8 @@ p {
 
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
-.menu-link:hover .menu-icon, /* hover= pseudo -classe, uma opção do pc, quando passa o mouse e cima do icone e ele muda de cor */
-.menu-link:hover .menu-text {
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text { /* hover= pseudo -classe, uma opção do pc, quando passa o mouse e cima do icone e ele muda de cor */
     color: var(--primary-color);
 }
 
@@ -196,7 +201,7 @@ p {
 }
 
 .menu-icon {
-    font-size: 1.rem;
+    font-size: 1.5rem;
 }
 
 .menu-text {
@@ -204,8 +209,8 @@ p {
     text-transform: uppercase;
 }
 
-.header-nav { /* menu desktop */
-    display: none;
+.header-nav { 
+    display: none; /* Oculta o menu desktop na versão mobile */
 }
 
 .menu-principal {
@@ -301,7 +306,7 @@ p {
     align-items: center;
     width: 4.8rem;
     height: 4.8rem;
-    border: 1px solid var(--secondary-border-color);
+    border: 3px solid var(--secondary-border-color);
     border-radius: 5rem;
 }
 
@@ -321,9 +326,6 @@ p {
     gap: 4rem;
 }
 
-/*
-
-*/
 .projeto-card {
     display: flex;
     flex-direction: column;
@@ -346,9 +348,9 @@ p {
 }
 
 .card-title {
- font-size: 2rem;
- color: var(--title-color);
- font-weight: 400;
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 400;
 }
 
 .card-descricao {
@@ -356,7 +358,7 @@ p {
 }
 
 .card-lista, .sobre-lista {
-    margin-left: 1.2rem;
+    margin-left: 1.25rem;
 }
 
 .card-item, .sobre-item {
@@ -422,7 +424,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1.rem;
+    gap: 1.5rem;
 }
 
 .sobre-icones {
@@ -432,7 +434,7 @@ p {
 }
 
 .sobre-icones i {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 .sobre-content2 .col1,
@@ -482,15 +484,15 @@ p {
 }
 
 .accordion-body {
-display: none;
-padding: 1.25rem;
-align-items: flex-start;
-gap: .625rem;
-border: 1px solid var(--primary-border-color);
+    display: none;
+    padding: 1.25rem;
+    align-items: flex-start;
+    gap: .625rem;
+    border: 1px solid var(--primary-border-color);
 }
 
 .accordion-item.active .accordion-header {
-    color: var(--secondary-bg-color);
+    background: var(--secondary-bg-color);
 }
 
 .accordion-item.active .accordion-body { /* Mantem a primeira opção Dev Front-end aberta */
@@ -563,7 +565,7 @@ footer p {
     }
 
     h2 {
-        font-size: 3;
+        font-size: 3rem;
     }
 
     #home, .projeos, .sobre {
