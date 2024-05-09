@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark"> <!-- Alterar a linguagem para portugues e definir o tema escuro do site -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Elaine Sena | Portfolio </title>
-    <!-- tag titulo-->
+    <title> Elaine Sena | Portfolio </title> <!-- tag titulo-->
+    <link rel="shortcut icon" href="img/favicon.ico"> 
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet"> <!-- colar o @import do google fonts no css para previnir o delay no carregamento do site, ou seja, se o html não carregar a fonte o css carrega -->
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 </head>
 <body>
     <header id="header"> <!-- cabeçalho -->
         <nav class="header-nav"> <!-- Isso pode ser útil quando você deseja ocultar a navegação de um cabeçalho, por exemplo, em certos dispositivos ou resoluções de tela -->
             <ul class="menu menu-principal"> <!-- sub classe -->
                 <li class="menu-item">
-                    <a href="#home" class="menu-link active"> <!-- active volta pra home selecionada ao carregar a pagina -->
+                    <a class="menu-link active" href="#home"> <!-- active volta pra home selecionada ao carregar a pagina -->
                         <span class="menu-text"> Home </span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#projetos" class="menu-link">
+                    <a class="menu-link" href="#projetos"> <!-- # sempre é linkada com um ID nas seções -->
                         <span class="menu-text"> Projetos </span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#sobre" class="menu-link">
+                    <a class="menu-link" href="#sobre">
                         <span class="menu-text"> Sobre </span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contato" class="menu-link">
+                    <a class="menu-link" href="#contato">
                         <span class="menu-text"> Contato </span>
                     </a>
                 </li>                
@@ -41,13 +37,14 @@
         </nav>
         <div class="header-logo"> <!-- Area do logo ou header-brand -->
             <a href="#home">
-                <img src="img/logo.png" alt="" class="logo"> <!-- alt = texto alternativo, descrição que aparece quando passa o mouse sobre a imagem -->
+                <img class="logo" src="img/logo.png" alt=""> <!-- alt = texto alternativo, descrição que aparece quando passa o mouse sobre a imagem -->
             </a>
         </div> <!-- Fim area do logo -->
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"> </i> <!-- i = icone // id = possivel variável para o javascript -->
         </div>
-    </header> <!-- Fim cabeçalho -- SHIFT + ALT + A -->
+    </header> 
+    <!-- Fim cabeçalho -->
     <!-- Menu mobile -->
     <nav class="nav-mobile">
         <ul class="menu menu-mobile">
@@ -74,12 +71,11 @@
                     <i class="menu-icon bi bi-envelope"> </i>
                     <span class="menu-text"> Contato </span>
                 </a>
-            </li>
-            
+            </li>    
         </ul>
     </nav>
     <!-- Fim menu mobile -->
-
+    <!-- Main/Sessões -->
     <main id="home">
         <div class="main-content">
             <h1> <b> Soluções Criativas & </b> Dev Front-End </h1>
@@ -91,7 +87,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-link" href="" target="_blank">
+                    <a class="menu-link" href="http://www.linkedin.com/in/elaine-ssena/" target="_blank">
                         <i class="menu-icon bi bi-linkedin"> </i>
                     </a>
                 </li>
@@ -106,18 +102,22 @@
                     </a>
                 </li>
             </ul>
-            <a href="projetos">
+
+            <a href="#projetos">
                 <button class="btn btn-primary">
                     <span> Ver Projetos </span>
                     <i class="bi bi-arrow-down-right"> </i>
                 </button>
             </a>
         </div> <!-- Fim main-content -->
+        
         <div class="video">
             <iframe src="https://www.youtube.com/embed/EAjWeHn01Z8" title="Eu sendo coração mole e o Google me entende" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </main>
-    <section class="tecnologias">
+    <!-- Fim Main -->
+    <!-- Tecnologias -->
+    <section class="tecnologias"> <!-- Não tem no menu, então não precisa de ID -->
         <h2> Conhecimento nas principais tecnologias do mercado. </h2>
         <ul class="tecnologias-lista">
             <li class="tecnologia-item"> <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt=""> </li>
@@ -125,7 +125,9 @@
             <li class="tecnologia-item"> <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt=""> </li>
             <li class="tecnologia-item"> <img class="tecnologia-logo" src="img/tecnologias/Bootstrap.svg" alt=""> </li>
         </ul>
-    </section> <!-- Fim tecnologias -->
+    </section> 
+    <!-- Fim tecnologias -->
+    <!-- Projetos -->
     <section id="projetos" class="projetos">
         <h2> Projetos </h2>
         <div class="projeto-container">
@@ -227,20 +229,22 @@
                                 <span> Repositório </span>
                             </a>
                         </button>
-                    </div> <!-- FIm card-button -->
+                    </div> <!-- Fim card-button -->
                 </div> <!-- Fim card-body -->
-
-                <a href="https://github.com/elainesena" target="_blank">
-                    <button class="btn btn-primary">
-                        <span> Ver todos os Projetos </span>
-                        <i class="bi bi-arrow-up-right"> </i>
-                    </button>
-                </a>
-
             </div> <!-- Fim projeto-card -->
-        </div> <!-- Fim projeto-container -->
-    </section> <!-- Fim projetos -->
 
+            <!-- Botão ver todos os Projetos -->
+            <!-- <a href="https://github.com/elainesena" target="_blank">
+                <button class="btn btn-primary">
+                    <span> Ver todos os Projetos </span>
+                    <i class="bi bi-arrow-up-right"> </i>
+                </button>
+            </a> -->
+
+        </div> <!-- Fim projeto-container -->
+    </section> 
+    <!-- Fim projetos -->
+    <!-- Sobre -->
     <section id="sobre" class="sobre">
         <div class="sobre-content1">
             <img class="sobre-logo" src="img/avatar.jfif" alt="">
@@ -347,7 +351,7 @@
                             <p> Senai. Abr 160h. <!-- Digital Innovation One. 68H --> </p>
                             <P> Desenvolvimento Front End com Angular e desenvolver habilidades práticas para construir aplicações web modernas e responsivas, enquanto treina recursos de Inteligência Artificial para se tornar um desenvolvedor completo. </P>
                         </div> <!-- Fim accordion-body -->
-                    </div>
+                    </div> <!-- Fim accordion-item active -->
 
                     <div class="accordion-item">
                         <button class="accordion-header">
@@ -358,7 +362,7 @@
                             <p> Senai. Fev 2024. 40h. </p>
                             <P> Este curso fornece uma visão geral da computação em nuvem, maneiras de usar o Google Cloud e diferentes opções de computação. </P>
                         </div> <!-- Fim accordion-body -->
-                    </div>
+                    </div> <!-- Fim accordion-item -->
 
                     <div class="accordion-item">
                         <button class="accordion-header end">
@@ -374,15 +378,15 @@
             </div> <!-- Fim col 2 -->
         </div> <!-- Fim conteudo 2 -->
     </section>
-
+    <!-- Fim Sobre -->
+    <!-- Contato -->
     <section id="contato" class="contato">
-
         <h2> Contato </h2>
         <p> Estou disponível para orientações e novas conexões.
             Contate-me via e-mail e conecte-se comigo através das minhas redes sociais. </p>
         <ul class="menu menu-social">
             <li>
-                <a class="menu-link" href="https://wwww.github.com/elainesena" target="_blank">
+                <a class="menu-link" href="https://github.com/ElaineSena" target="_blank">
                     <i class="menu-icon bi bi-github"> </i>
                     <span> GitHub </span>
                 </a>
@@ -399,7 +403,7 @@
                     <span> Instagram </span>
                 </a>
             </li>
-        </ul>
+        </ul> <!-- Fim menu-social -->
         <a href="mailto:elainesenadev@gmail.com">
             <button class="btn btn-primary">
                 <span class="email"> elainesenadev@gmail.com </span>
