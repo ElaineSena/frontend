@@ -9,7 +9,7 @@ function changeTheme(){ // Altera o tema da interface entre claro e escuro
     currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark");
 
     toggleTheme.classList.toggle("bi-sun");
-    toggleTheme.classList.toggle("bi-moon-stars");
+    toggleTheme.classList.toggle("bi-moon-stars"); // bi-moon-stars não está no html e css, porém o boostrap está linkado no document do htmal
 }
 
 toggleTheme.addEventListener("click", changeTheme);
