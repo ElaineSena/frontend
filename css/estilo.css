@@ -4,8 +4,8 @@
 :root[data-theme='dark'] { /* Definir tema dark do site // root = raiz*/
     --primary-color: #F0F0F0; /* cor de texto */
     --secondary-color: #28292E; /* segunda cor de texto */
-    --primary-bg-color: #111217; /* cor de fundo = bg = background */
-    --secondary-bg-color: #28292E; /*  */
+    --primary-bg-color: #290d35; /* cor de fundo = bg = background */
+    --secondary-bg-color: #381a44; /*  */
     --primary-border-color: #28292E;
     --secondary-border-color: #565754;
 
@@ -17,10 +17,10 @@
 
 :root[data-theme='light'] { /* Definir tema light */
     --primary-color: #0B0B0F;
-    --primary-bg-color: #E9E9E9;
-    --secondary-bg-color: #C7C8C9;
-    --primary-border-color: #C7C8C9;
-    --secondary-border-color: #9A9A9C;
+    --primary-bg-color: #e8dbf3;
+    --secondary-bg-color: #dac3e3;
+    --primary-border-color: #dac3e3;
+    --secondary-border-color: #b1a6c2;
 
     --title-color: #0B0B0F;
     --text-color: #28292E;
@@ -416,8 +416,8 @@ p {
     object-fit: cover;
     object-position: center;
     pointer-events: none;
-    border-radius: 60rem;
-    border: 8px solid var(--primary-color);
+    border-radius: 50rem;
+    border: 5px solid var(--primary-color);
 }
 
 .sobre-descricao {
