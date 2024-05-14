@@ -13,5 +13,20 @@ function changeTheme(){ // Altera o tema da interface entre claro e escuro
 }
 
 toggleTheme.addEventListener("click", changeTheme);
+// Fim função mundar tema do site
 
+accordionHeaders.forEach(header => {
+    header.addEventListener("click", () => {
+        const accordionItem = header.parentElement;
+        const accordionActive = accordionItem.classList.contains("active");
 
+        accordionActive ? accordionItem.classList.remove("active") : accordionItem.classList.add("active")
+    }) //Fim função accordion
+})
+
+menuLinks.forEach(item => {
+    item; addEventListener("click", () => { //Evento de click
+        menuLinks.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+    })
+})
